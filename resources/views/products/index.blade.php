@@ -31,7 +31,7 @@
                             <strong>Sort by:</strong>
                                 <form method="GET" action="{{ route('products.index') }}">
                                     <select class="form-select" name="sort_by" id="sort_by" onchange="this.form.submit()">
-                                        <option value="" disabled selected>Select</option>
+                                        <option value="" disabled selected>Default</option>
                                         <option value="name" {{ request('sort_by') == 'name' ? 'selected' : '' }}>Name: (a - z) </option>
                                         <option value="price" {{ request('sort_by') == 'price' ? 'selected' : '' }}>Price: low - high </option>
                                     </select>
@@ -43,7 +43,7 @@
                             <form method="GET" action="{{ route('products.index') }}">
                                 <div class="row">
                                     <div class="col-9">
-                                        <input class="form-control" value="{{ old('search') }}" type="text" name="search" placeholder="Search by product ID or description">
+                                        <input class="form-control" value="{{ old('search') }}" type="text" name="search" placeholder="Search by product ID, Description">
                                     </div>
                                     <div class="col-2">
                                         <button type="submit" class="btn btn-primary">Search</button>
